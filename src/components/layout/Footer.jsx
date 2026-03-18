@@ -29,6 +29,18 @@ export default function Footer() {
             >
               Sleep
             </Link>
+            <Link
+              to="/nutrition"
+              className="text-sm text-[#9C6644] hover:text-[#7F5539] transition-colors"
+            >
+              Nutrition
+            </Link>
+            <Link
+              to="/exercise"
+              className="text-sm text-[#9C6644] hover:text-[#7F5539] transition-colors"
+            >
+              Exercise
+            </Link>
           </div>
 
           {/* Disclaimer */}

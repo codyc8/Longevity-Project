@@ -6,7 +6,6 @@ import Home from './pages/Home'
 import Sleep from './pages/Sleep'
 import Nutrition from './pages/Nutrition'
 import Exercise from './pages/Exercise'
-import Supplements from './pages/Supplements'
 
 // Wrapper component to handle route transitions
 function AnimatedRoutes() {
@@ -19,7 +18,6 @@ function AnimatedRoutes() {
         <Route path="/sleep" element={<Sleep />} />
         <Route path="/nutrition" element={<Nutrition />} />
         <Route path="/exercise" element={<Exercise />} />
-        <Route path="/supplements" element={<Supplements />} />
       </Routes>
     </AnimatePresence>
   )

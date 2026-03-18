@@ -38,18 +38,6 @@ const ExerciseIcon = () => (
   </svg>
 )
 
-const SupplementsIcon = () => (
-  <svg className="w-24 h-24" viewBox="0 0 100 100" fill="none">
-    <rect x="30" y="25" width="40" height="55" rx="8" stroke="currentColor" strokeWidth="3" />
-    <rect x="35" y="30" width="30" height="20" rx="4" fill="currentColor" opacity="0.3" />
-    <circle cx="50" cy="65" r="8" stroke="currentColor" strokeWidth="2" />
-    <path d="M50 60 L50 70" stroke="currentColor" strokeWidth="2" />
-    <path d="M45 65 L55 65" stroke="currentColor" strokeWidth="2" />
-    <path d="M38 20 L38 25" stroke="currentColor" strokeWidth="2" />
-    <path d="M62" y1="20" x2="62" y2="25" stroke="currentColor" strokeWidth="2" />
-  </svg>
-)
-
 const topics = [
   {
     title: 'Sleep',
@@ -68,12 +56,6 @@ const topics = [
     description: 'Strength training and cardio work together. Build resilience, improve insulin sensitivity, and injury-proof your body for the long game.',
     icon: <ExerciseIcon />,
     link: '/exercise',
-  },
-  {
-    title: 'Supplements',
-    description: 'Optional, not magic. Evidence-first approach to the few interventions that actually have data behind them. Skip the hype, focus on what works.',
-    icon: <SupplementsIcon />,
-    link: '/supplements',
   },
 ]
 
@@ -103,7 +85,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             title="The LiveLonger Framework"
-            subtitle="Four pillars that compound over time."
+            subtitle="Three pillars that compound over time."
           />
 
           <div className="space-y-20 md:space-y-28">

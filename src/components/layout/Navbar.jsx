@@ -7,7 +7,6 @@ const navLinks = [
   { to: '/sleep', label: 'Sleep' },
   { to: '/nutrition', label: 'Nutrition' },
   { to: '/exercise', label: 'Exercise' },
-  { to: '/supplements', label: 'Supplements' },
 ]
 
 export default function Navbar() {
