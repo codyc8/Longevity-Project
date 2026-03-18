@@ -30,7 +30,7 @@ export default function TrianglesBackground() {
     // Generate triangles
     const generateTriangles = () => {
       const triangles = []
-      const count = Math.min(30, Math.floor((canvas.width * canvas.height) / 50000))
+      const count = Math.min(60, Math.floor((canvas.width * canvas.height) / 25000))
 
       for (let i = 0; i < count; i++) {
         triangles.push({
@@ -42,7 +42,7 @@ export default function TrianglesBackground() {
           driftX: (Math.random() - 0.5) * 0.3,
           driftY: (Math.random() - 0.5) * 0.3,
           parallaxFactor: Math.random() * 0.3 + 0.1,
-          opacity: Math.random() * 0.08 + 0.03,
+          opacity: Math.random() * 0.096 + 0.036,
           filled: Math.random() > 0.5,
         })
       }
