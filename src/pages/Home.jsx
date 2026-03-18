@@ -3,6 +3,7 @@ import Hero from '../components/home/Hero'
 import TopicRow from '../components/home/TopicRow'
 import SectionHeader from '../components/ui/SectionHeader'
 import Card from '../components/ui/Card'
+import codyPhoto from '../assets/cody.jpg'
 
 // Topic icons as simple SVG components
 const SleepIcon = () => (
@@ -80,26 +81,43 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Framework Section */}
-      <section id="framework" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+      {/* About the Author */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
           <SectionHeader
-            title="The LiveLonger Framework"
-            subtitle="Three pillars that compound over time."
+            title="About the Author"
+            subtitle="Get to know the person behind the site."
           />
 
-          <div className="space-y-20 md:space-y-28">
-            {topics.map((topic, index) => (
-              <TopicRow
-                key={topic.title}
-                title={topic.title}
-                description={topic.description}
-                icon={topic.icon}
-                link={topic.link}
-                reversed={index % 2 === 1}
+          <motion.div
+            className="flex flex-col md:flex-row items-center gap-10"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            {/* Photo */}
+            <div className="flex-shrink-0">
+              <img
+                src={codyPhoto}
+                alt="Cody Chen"
+                className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover object-center shadow-lg border-4 border-[#DDB892]"
               />
-            ))}
-          </div>
+            </div>
+
+            {/* Bio */}
+            <Card variant="elevated" className="flex-1" hover={false}>
+              <h3 className="text-xl font-bold text-[#7F5539] mb-1">Cody Chen</h3>
+              <p className="text-sm text-[#B08968] mb-4">Born in Taiwan, Raised in LA, Now studying in Davis</p>
+              <p className="text-[#7F5539] leading-relaxed">
+                I'm a Computer Science and Engineering student at UC Davis — not a doctor, not a
+                health expert. But I've always been curious about what actually keeps people healthy
+                long-term, and I care a lot about the people around me. LiveLonger started as a
+                class project and turned into something I genuinely use to improve my lifestyle.
+                The goal is simple: take the best research out there and make it easy for anyone to act on.
+              </p>
+            </Card>
+          </motion.div>
         </div>
       </section>
 
@@ -140,6 +158,30 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Framework Section */}
+      <section id="framework" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <SectionHeader
+            title="The LiveLonger Framework"
+            subtitle="Three pillars that compound over time."
+          />
+
+          <div className="space-y-20 md:space-y-28">
+            {topics.map((topic, index) => (
+              <TopicRow
+                key={topic.title}
+                title={topic.title}
+                description={topic.description}
+                icon={topic.icon}
+                link={topic.link}
+                reversed={index % 2 === 1}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   )
 }
